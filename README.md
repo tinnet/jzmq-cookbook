@@ -13,6 +13,17 @@ Cookbooks
 - java
 - zeromq (https://github.com/pyronicide/zeromq-cookbook)
 
+Runtime
+-------
+
+This cookbook does not (yet?) include the path/classpath "hacks" mentioned in
+the offical documentation (http://www.zeromq.org/bindings:java), so you have
+to call your app like this (paths configurable in attributes):
+
+
+    java -Djava.library.path=/usr/local/lib -classpath /usr/local/share/java/zmq.jar:. YOURCLASS
+
+
 ATTRIBUTES
 ==========
 
